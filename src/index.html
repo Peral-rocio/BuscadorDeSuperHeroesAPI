@@ -3,27 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Hero Finder</title>
 </head>
 <body class="modo-Claro">
+    <!-- COMIENZA AQUI EL HEADER -->
     <header>
         <div class="contenedor-header">
         <img  id="imagen-logo" src="./assets/imagenes/logo.png" alt="Logo Hero-Finder">
         <button id="btnCambiar-Tema">🌞</button>
         </div>
     </header>
-    <div>(hero)</div>
+    <!--FINALIZA HEADER -->
+
+    <!--COMIENZA EL HERO -->
+    <div class="contenedor-hero">
+        <h1>
+            ⚡ ENCUENTRA TU PERSONAJE FAVORITO ⚡
+        </h1>
+    </div>
+    <!--FINALIZA EL HERO -->
+
+   <!--COMIENZA EL MAIN-->
     <main>
-        <div>
-            (busqueda input)
+        <section class="section-contenedor">
+
+        <p id="titulo-pesonajes"> PERSONAJES ENCONTRADOS:</p>
+          
+         <!-- INPUT QUE BUSCA  PERSONAJE POR NOMBRE--> 
+          <div class="contenedor-buscador">
+              <div class="input-buscador">
+                 <i class="bi bi-search"></i>
+                  <input type="text" placeholder="Ingresa el nombre del Personaje">
+              </div>
+            <!-- FILTROS -->         
+            <!-- FILTRO DE GENERO -->
+              <div class="filtos">
+               <select id="genero-filtros">
+              <option value="todos">Todos los Géneros</option>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+              <option value="-">Desconocido</option>
+            </select>
+  
+            <!-- FILTRO DE ROL/STATUS/MORAL-->
+             <select id="alignment-Filtro">
+              <option value="todos"> Todos los personajes</option>
+              <option value="Buenos">Heroes</option>
+              <option value="malos">Villanos</option>
+              <option value="neutrales">Neutrales</option>
+              <option value="-">Desconocido</option>
+            </select>
+          
+          <!-- FILTRO DE ORDEN DE APARICION DE PERSONAJES -->
+            <select id="orden-filtros">
+              <option value="az"> A - Z</option>
+              <option value="za"> Z- A </option>
+            </select>
+
+            <button> Buscar </button>
+              </div>
+          </section>
+          </div>
+        <!-- AQUI FINALIZA SECCION BUSCAR Y FILTROS-->
+
+        <!-- COMIENZA SECCION RESULTADO DE BUSQUEDA -->
+         <div class="section-resultados">
+             <section>
+                 (resultadobusqueda)
+             </section>
+            </div> 
+
+            <!--Aqui comienza la paginacion-->
+              <!-- Paginación -->
+        <section class="pagination-section">
+          <div class="pagination-controls" id="paginationControls">
+            <button id="prevBtn" class="btn" disabled>
+              <i class="fa-solid fa-chevron-left"></i> Anterior
+            </button>
+            <span id="pageInfo" class="page-info">Página 1 de 1</span>
+            <button id="nextBtn" class="btn" disabled>
+              Siguiente <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+        </main>
+
+    <!-- Modal de Detalles -->
+    <section class="modal" id="heroModal">
+      <div class="modal-content glassmorphism">
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+        <div class="modal-body" id="modalBody">
+          <!-- Data modal inyectado aquí -->
         </div>
-        <div>
-            (resultadobusqueda)
-        </div>
-    </main>
+      </div>
+    </section> 
+
     <footer>
-        (nombre y contactos)
+       <div class="caja-footer">
+        <a class="icono-contacto" href="https://ar.linkedin.com/" aria-label="linkedin">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a class="icono-contacto" href="https://github.com/" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          class="icono-contacto"
+          href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&osid=1&passive=1209600&service=mail&ifkv=ARpgrqdjcIi_R3o4eQCOOFrDmizmTJAw5ONbecUsWw7gpbeHvI7JgQDLTZ-_WhGY_-piZrSUP7_uqg&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin" aria-label="Email"
+        >
+        <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+      <p class="parrafo-footer">Hecho por &#128525; Rocio Peralta</p>
+      <p>data sacada de api: </p>
+    </footer>
     </footer>
 
     <script src="./Js/main.js"></script>
