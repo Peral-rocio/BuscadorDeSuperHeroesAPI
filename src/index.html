@@ -34,20 +34,18 @@
    <!--COMIENZA EL MAIN-->
     <main>
         <section class="section-contenedor">
-
-        <p id="titulo-pesonajes"> PERSONAJES ENCONTRADOS:</p>
-          
          <!-- INPUT QUE BUSCA  PERSONAJE POR NOMBRE--> 
-          <div class="contenedor-buscador">
+         <div class="contenedor-buscador">
+              <p id="titulo-pesonajes"> Encuentra a tu Personaje:</p>
               <div class="input-buscador">
                  <i class="bi bi-search"></i>
-                  <input type="text" placeholder="Ingresa el nombre del Personaje">
+                  <input id="buscardor" type="text" placeholder="Ingresa el nombre del Personaje">
               </div>
             <!-- FILTROS -->         
             <!-- FILTRO DE GENERO -->
-              <div class="filtos">
+              <div class="filtros">
                <select id="genero-filtros">
-              <option value="todos">Todos los Géneros</option>
+              <option value="todos">Géneros</option>
               <option value="masculino">Masculino</option>
               <option value="femenino">Femenino</option>
               <option value="-">Desconocido</option>
@@ -55,7 +53,7 @@
   
             <!-- FILTRO DE ROL/STATUS/MORAL-->
              <select id="alignment-Filtro">
-              <option value="todos"> Todos los personajes</option>
+              <option value="todos"> Personajes</option>
               <option value="Buenos">Heroes</option>
               <option value="malos">Villanos</option>
               <option value="neutrales">Neutrales</option>
@@ -64,12 +62,13 @@
           
           <!-- FILTRO DE ORDEN DE APARICION DE PERSONAJES -->
             <select id="orden-filtros">
-              <option value="az"> A - Z</option>
-              <option value="za"> Z- A </option>
+              <option value="az"> A-Z</option>
+              <option value="za"> Z-A </option>
             </select>
-
-            <button> Buscar </button>
-              </div>
+        </div>
+        <div>
+            <button id="btn-buscar">Buscar</button>
+        </div> 
           </section>
           </div>
         <!-- AQUI FINALIZA SECCION BUSCAR Y FILTROS-->
@@ -83,28 +82,28 @@
 
             <!--Aqui comienza la paginacion-->
               <!-- Paginación -->
-        <section class="pagination-section">
-          <div class="pagination-controls" id="paginationControls">
-            <button id="prevBtn" class="btn" disabled>
-              <i class="fa-solid fa-chevron-left"></i> Anterior
+        <section class="pag-seccion">
+          <div class="pag-control" id="pagina-controles">
+            <button id="btn-Ant" class="btn-pag" disabled >
+             <i class="bi bi-caret-left-fill"></i>
             </button>
-            <span id="pageInfo" class="page-info">Página 1 de 1</span>
-            <button id="nextBtn" class="btn" disabled>
-              Siguiente <i class="fa-solid fa-chevron-right"></i>
+            <span id="pagInfo" class="page-info">Página 1 de 1</span>
+            <button id="btn-sig" class="btn-pag" disabled>
+              <i class="bi bi-caret-right-fill"></i>
             </button>
           </div>
         </section>
         </main>
 
-    <!-- Modal de Detalles -->
+     <!-- Modal de Detalles
     <section class="modal" id="heroModal">
       <div class="modal-content glassmorphism">
         <button class="close-btn" id="closeModalBtn">&times;</button>
         <div class="modal-body" id="modalBody">
-          <!-- Data modal inyectado aquí -->
+          Data modal inyectado aquí 
         </div>
       </div>
-    </section> 
+    </section>  -->
 
     <footer>
        <div class="caja-footer">
@@ -120,10 +119,10 @@
         >
         <i class="bi bi-envelope"></i>
         </a>
+        <a href="https://superheroapi.com/">
+        <i class="bi bi-info-square-fill"></i>
+        </a>
       </div>
-      <p class="parrafo-footer">Hecho por &#128525; Rocio Peralta</p>
-      <p>data sacada de api: </p>
-    </footer>
     </footer>
 
     <script src="./Js/main.js"></script>

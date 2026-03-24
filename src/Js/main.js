@@ -1,6 +1,7 @@
 //CAMBIO DE TEMA: MODO OSCURO MODO CLARO//
 
 const $botonTema = document.getElementById("btnCambiar-Tema")
+const $tituloTema= document.querySelector("h1")
 
 $botonTema.addEventListener("click", () => {
  if(document.body.classList.contains("modo-Oscuro")){
