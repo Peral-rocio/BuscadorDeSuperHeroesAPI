@@ -97,11 +97,11 @@ h1:hover{
 
 main{
     width: 100%;
-    height: 1500px;
+    min-height: 100vh;
     border: 15px solid #0a4267;
     background-image: url(../assets/imagenes/background.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
