@@ -1,12 +1,8 @@
 import { fetchHeroes } from "./api.js"
 
-import { mostrarHeroes } from "./ui.js";
+import { init } from "./ui.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  mostrarHeroes();
-});
-
-
+init();
 
 
 
