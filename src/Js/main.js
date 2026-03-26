@@ -1,19 +1,8 @@
-//CAMBIO DE TEMA: MODO OSCURO MODO CLARO//
+import { fetchHeroes } from "./api.js"
 
-const $botonTema = document.getElementById("btnCambiar-Tema")
-const $tituloTema= document.querySelector("h1")
+import { init } from "./ui.js";
 
-$botonTema.addEventListener("click", () => {
- if(document.body.classList.contains("modo-Oscuro")){
-    document.body.classList.add("modo-Claro")
-    document.body.classList.remove("modo-Oscuro")
+init();
 
-    $botonTema.textContent="🌞"
- }
- else{
-    document.body.classList.add("modo-Oscuro")
-    document.body.classList.remove("modo-Claro")
 
-    $botonTema.textContent="🌙"
- }
-})
+

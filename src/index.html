@@ -46,18 +46,18 @@
             <!-- FILTRO DE GENERO -->
               <div class="filtros">
                <select id="genero-filtros">
-              <option value="todos">Géneros</option>
-              <option value="masculino">Masculino</option>
-              <option value="femenino">Femenino</option>
+              <option value="all">Géneros</option>
+              <option value="male">Masculino</option>
+              <option value="female">Femenino</option>
               <option value="-">Desconocido</option>
             </select>
   
             <!-- FILTRO DE ROL/STATUS/MORAL-->
              <select id="alignment-Filtro">
-              <option value="todos"> Personajes</option>
-              <option value="Buenos">Heroes</option>
-              <option value="malos">Villanos</option>
-              <option value="neutrales">Neutrales</option>
+              <option value="all"> Personajes</option>
+              <option value="good">Heroes</option>
+              <option value="bad">Villanos</option>
+              <option value="neutral">Neutrales</option>
               <option value="-">Desconocido</option>
             </select>
           
@@ -80,7 +80,8 @@
             <div class="spinner"></div>
             <p class="cargandoheroes"> Cargando superheroes...</p>
           </div>
-          <div class="heroes-grid" id="heroesGrid"></div>
+          <div class="heroes-grid" id="heroesGrid">
+          </div>
          </section>
 
             <!--AQUI COMIENZA LA PAGINACION -->
@@ -133,6 +134,6 @@
     </footer>
     <!--TERMINA FOOTER-->
 
-    <script src="./Js/main.js"></script>
+    <script  type="module" src="./Js/main.js"></script>
 </body>
 </html>
