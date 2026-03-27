@@ -30,8 +30,7 @@ function crearCardHero(hero) {
      </div>
     <div class="heroes-info">
       <h3>${hero.name}</h3>
-      <p>Inteligencia ${hero.powerstats.intelligence}</p>
-      <p> Editorial: ${hero.biography.publisher}</p>
+      <p>${hero.biography.publisher}</p>
       <button class="button-info"> Info </button>
      </div>
    `;
