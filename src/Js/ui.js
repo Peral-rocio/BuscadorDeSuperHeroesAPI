@@ -7,6 +7,8 @@ const appState = createAppState(20);
 const heroesGrid = document.getElementById("heroesGrid");
 const btnAnt = document.getElementById("btn-Ant");
 const btnSig = document.getElementById("btn-sig");
+const btnPrimero = document.getElementById("btn-primerapag");
+const btnFinal= document.getElementById("btn-finalpag");
 const pagInfo = document.getElementById("pagInfo");
 
 const inputBuscador = document.getElementById("buscardor");
@@ -44,7 +46,7 @@ function render() {
   const heroes = appState.getPaginatedHeroes();
 
   if (heroes.length === 0) {
-    heroesGrid.innerHTML = `<p class="NotFound"> No se encontró héroe</p>`;
+    heroesGrid.innerHTML = `<p class="NotFound"> No se encontró el personaje</p>`;
   } else {
     heroes.forEach(hero => {
       const card = crearCardHero(hero);
@@ -55,18 +57,31 @@ function render() {
   renderPagination();
 }
 
-//PAGINACION (arreglar lo faltante)//
+//PAGINACION//
 function renderPagination() {
   const current = appState.currentPage;
   const total = appState.getTotalPages();
 
   pagInfo.textContent = `Página ${current} de ${total}`;
 
+  btnPrimero.disabled = current===1;
   btnAnt.disabled = current === 1;
   btnSig.disabled = current === total;
+  btnFinal.disabled = current === total;
+ 
 }
 
 //Eventos botones
+
+btnPrimero.addEventListener("click", () => {
+  appState.setPage(1);
+  render();
+})
+
+btnFinal.addEventListener("click", () =>{
+  appState.setPage(appState.getTotalPages());
+  render();
+})
 
 btnAnt.addEventListener("click", () => {
   if (appState.setPage(appState.currentPage - 1)) {
@@ -79,6 +94,7 @@ btnSig.addEventListener("click", () => {
     render();
   }
 });
+
 
 //evento filtro
 

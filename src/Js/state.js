@@ -31,7 +31,7 @@ export function createAppState(initialItemsPerPage = 20) {
 
       return matchesSearch && matchesGender && matchesAlignment;
     });
-    
+
     if (state.filters.order === "az") {
       state.filteredHeroes.sort((a, b) => a.name.localeCompare(b.name));
     } else if (state.filters.order === "za") {
@@ -48,6 +48,7 @@ export function createAppState(initialItemsPerPage = 20) {
     },
     setHeroes(heroes) {
       state.allHeroes = heroes;
+      state.currentPage = 1;
       applyFilters();
     },
     setFilter(key, value) {
@@ -61,10 +62,7 @@ export function createAppState(initialItemsPerPage = 20) {
       return state.filteredHeroes.slice(startIndex, endIndex);
     },
     getTotalPages() {
-      return Math.max(
-        1,
-        Math.ceil(state.filteredHeroes.length / state.itemsPerPage)
-      );
+     return Math.ceil(state.filteredHeroes.length / state.itemsPerPage);
     },
     setPage(pageNumber) {
       const totalPages = this.getTotalPages();
