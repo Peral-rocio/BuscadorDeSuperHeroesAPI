@@ -120,7 +120,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    /* margin: 20px; */
+    margin: 20px; 
     border: 5px double var(--color-secundario);
 }
 
@@ -496,20 +496,14 @@ footer{
 }
 
 /*...........MEDIAS QUERYS.......... */
+/*DE MOBILE A TABLET*/
 
-@media (min-width: 768px) and (max-width: 1024px){
-    h1{
-        font-size: 30px;
-    }
-}
-
-
-@media (min-width: 320px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 767px){
    
 /*SECCION HEADER */
 #imagen-logo{
     width: 80px;
-    margin: 0px 15px;
+    margin: 0px 20px;
 }
 
 #btnCambiar-Tema{
@@ -517,10 +511,6 @@ footer{
     height: 40px;
     font-size: 18px;
     margin: 10px 20px 10px 10px;
-}
-
-#btnCambiar-Tema{
-    cursor: pointer;
 }
 
 /*HERO SECCION*/
@@ -626,4 +616,102 @@ footer{
     font-size: 30px;
 }
 
+}
+
+/*DE TABLET A ESCRITORIO*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #imagen-logo{
+    width: 100px;
+    margin: 0px 40px;
+}
+
+#btnCambiar-Tema{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 10px 40px 10px 10px;
+}
+
+/*HERO SECCION*/
+
+ h1{
+        font-size: 25px;
+        padding: 10px ;
+    }
+
+/*SECCION DE BUSQUEDA */
+
+.contenedor-buscador{
+    margin: 20px 0px;
+}
+
+#titulo-pesonajes{
+    width: 350px;
+    font-size: 20px;
+    padding: 10px 10px 10px 20px;
+}
+
+.input-buscador{
+    width: 80%;
+    height: 70px;
+    gap: 15px;
+    margin: 10px;
+}
+
+.bi-search{
+    font-size: 30px;
+}
+
+#buscardor{
+    width: 80%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.filtros{
+    width: 60%;
+    height: 45px;
+    border-radius: 20px;
+    margin: 10px 5px;
+    padding: 25px 0px;
+}
+
+#btn-buscar{
+    width: 180px;
+    margin: 20px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+/*SECCION PAGINACION */
+.pag-seccion{
+    font-size: 20px;
+}
+
+.pag-control{
+    width: 350px;
+    height: 40px;
+    gap: 15px;
+}
+
+.btn-pag{
+    font-size: 12px;
+    padding: 5px;
+
+}
+
+/*SECCION FOOTER*/
+.caja-footer, a{
+    width: 85%;
+}
+
+.bi-linkedin,
+.bi-github,
+.bi-envelope,
+.bi-info-square-fill {
+    font-size: 40px;
+}
 }
