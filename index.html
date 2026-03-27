@@ -80,19 +80,24 @@
             <div class="spinner"></div>
             <p class="cargandoheroes"> Cargando superheroes...</p>
           </div>
-          <div class="heroes-grid" id="heroesGrid">
-          </div>
+          <div class="heroes-grid" id="heroesGrid"></div>
          </section>
 
             <!--AQUI COMIENZA LA PAGINACION -->
         <section class="pag-seccion">
           <div class="pag-control" id="pagina-controles">
+            <button id="btn-primerapag" class="btn-pag" disabled>
+              <i class="bi bi-arrow-bar-left"></i>
+            </button>
             <button id="btn-Ant" class="btn-pag" disabled >
              <i class="bi bi-caret-left-fill"></i>
             </button>
             <span id="pagInfo" class="page-info">Página 1 de 1</span>
             <button id="btn-sig" class="btn-pag" disabled>
               <i class="bi bi-caret-right-fill"></i>
+            </button>
+            <button id="btn-finalpag" class="btn-pag" disabled>
+              <i class="bi bi-arrow-bar-right"></i>
             </button>
           </div>
         </section>
@@ -127,7 +132,7 @@
         >
         <i class="bi bi-envelope"></i>
         </a>
-        <a href="https://superheroapi.com/">
+        <a href="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json">
         <i class="bi bi-info-square-fill"></i>
         </a>
       </div>
