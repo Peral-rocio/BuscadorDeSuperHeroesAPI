@@ -120,7 +120,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 20px;
+    margin: 20px; 
     border: 5px double var(--color-secundario);
 }
 
@@ -219,7 +219,6 @@ main{
     width: 200px;
     margin: 20px;
     padding: 10px;
-    font-size: 25px;
     color: black;
     font-family: "Comic Relief", system-ui;
     font-weight: 700;
@@ -496,3 +495,223 @@ footer{
     transform: scale(1.3);
 }
 
+/*...........MEDIAS QUERYS.......... */
+/*DE MOBILE A TABLET*/
+
+@media (min-width: 320px) and (max-width: 767px){
+   
+/*SECCION HEADER */
+#imagen-logo{
+    width: 80px;
+    margin: 0px 20px;
+}
+
+#btnCambiar-Tema{
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px 20px 10px 10px;
+}
+
+/*HERO SECCION*/
+
+ h1{
+        font-size: 12px;
+        padding: 10px ;
+    }
+
+/*SECCION DE BUSQUEDA */
+
+.contenedor-buscador{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px double var(--color-secundario);
+    margin: 20px 0px;
+}
+
+#titulo-pesonajes{
+    width: 200px;
+    font-size: 12px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.input-buscador{
+    width: 90%;
+    height: 55px;
+    gap: 8px;
+    margin: 3px;
+}
+
+.bi-search{
+    font-size: 25px;
+}
+
+#buscardor{
+    width: 80%;
+    height: 20px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.filtros{
+    width: 95%;
+    height: 45px;
+    border-radius: 20px;
+    margin: 10px 5px;
+}
+
+#genero-filtros{
+    width: 30%;
+    height: 25px;
+}
+
+#alignment-Filtro{
+     width: 32%;
+    height: 25px;
+}
+
+#orden-filtros{
+    width: 30 ;
+    height: 25px;
+}
+
+#btn-buscar{
+    width: 150px;
+    margin: 20px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.pag-seccion{
+    font-size: 14px;
+}
+
+.pag-control{
+    width: 250px;
+    height: 40px;
+    gap: 10px;
+}
+
+.btn-pag{
+    font-size: 10px;
+    padding: 5px;
+
+}
+
+/*SECCION FOOTER*/
+.caja-footer, a{
+    width: 85%;
+}
+
+.bi-linkedin,
+.bi-github,
+.bi-envelope,
+.bi-info-square-fill {
+    font-size: 30px;
+}
+
+}
+
+/*DE TABLET A ESCRITORIO*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #imagen-logo{
+    width: 100px;
+    margin: 0px 40px;
+}
+
+#btnCambiar-Tema{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 10px 40px 10px 10px;
+}
+
+/*HERO SECCION*/
+
+ h1{
+        font-size: 25px;
+        padding: 10px ;
+    }
+
+/*SECCION DE BUSQUEDA */
+
+.contenedor-buscador{
+    margin: 20px 0px;
+}
+
+#titulo-pesonajes{
+    width: 350px;
+    font-size: 20px;
+    padding: 10px 10px 10px 20px;
+}
+
+.input-buscador{
+    width: 80%;
+    height: 70px;
+    gap: 15px;
+    margin: 10px;
+}
+
+.bi-search{
+    font-size: 30px;
+}
+
+#buscardor{
+    width: 80%;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.filtros{
+    width: 60%;
+    height: 45px;
+    border-radius: 20px;
+    margin: 10px 5px;
+    padding: 25px 0px;
+}
+
+#btn-buscar{
+    width: 180px;
+    margin: 20px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+/*SECCION PAGINACION */
+.pag-seccion{
+    font-size: 20px;
+}
+
+.pag-control{
+    width: 350px;
+    height: 40px;
+    gap: 15px;
+}
+
+.btn-pag{
+    font-size: 12px;
+    padding: 5px;
+
+}
+
+/*SECCION FOOTER*/
+.caja-footer, a{
+    width: 85%;
+}
+
+.bi-linkedin,
+.bi-github,
+.bi-envelope,
+.bi-info-square-fill {
+    font-size: 40px;
+}
+}
