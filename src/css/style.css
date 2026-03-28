@@ -257,12 +257,18 @@ main{
 
 /* LOADER  Y SPINNER*/
 .loader {
-  text-align: center;
-  padding: 50px 0;
+width: 95%;
+height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 50px 0;
 }
 
 .spinner {
-  width: 60px;
+ width: 60px;
   height: 60px;
   border: 4px solid #ccc;
   border-top-color: rgba(255, 0, 0, 0.877);
@@ -376,7 +382,7 @@ main{
 }
 
 
-/* PAGINACION (Areglar lo faltante)*/
+/* PAGINACION*/
 
 .pag-seccion{
     width: auto;
@@ -416,7 +422,7 @@ main{
 /*MODAL ESTILO*/
 
 .modal{
-   display: none ;
+   display: none;
    position: fixed;
    top: 0;
    left: 0;
@@ -429,17 +435,24 @@ main{
 }
 
 .modal-contenido{
-    width: 70%;
-    height: 300px;
+    width: 50%;
+    height: 80%;
     background-color: var(--color-secundario);
     box-shadow: var(--sombras);
      border-radius: 30px;
-    position: relative;
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
      z-index: 1001;
      display: flex;
      justify-content: center;
      align-items: center;
      }
+
+.modal.active {
+   display: flex;
+}     
 
 .btn-Cerrar{
     background-color: var(--background-color);
