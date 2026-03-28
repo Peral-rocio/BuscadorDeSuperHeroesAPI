@@ -163,7 +163,7 @@ export function abrirModal(hero) {
   modalBody.innerHTML = `
     <div class="modal-grid">
       <div class="modal-image">
-        <img src="${imgUrl}" alt="${hero.name}" style="width:100%">
+        <img src="${imgUrl}" alt="${hero.name}">
       </div>
       <div class="modal-details">
         <h2>${hero.name}</h2>

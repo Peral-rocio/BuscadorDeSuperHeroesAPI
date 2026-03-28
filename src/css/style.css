@@ -467,7 +467,95 @@ padding: 50px 0;
     cursor: pointer;
 }
 
+/*ESTILADO DEL MODAL DE JS */
 
+.modal-body{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 5px solid aqua;
+}
+
+.modal-grid{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     gap: 5px;
+    border: 2px solid navy
+}
+.modal-image{
+    width: 50%;
+    height: 100%;
+    border: 2px solid blue
+}
+
+.modal-image img{
+ width: 100%;
+ height: 100%;
+border: 2px solid olive
+}
+
+.modal-details{
+    width: 50%;
+    height: 100%;
+    font-family: var(--font-family);
+    border: 2px solid red
+}
+
+.modal-details h2{
+    margin: 20px 20px 5px 20px;
+}
+
+.modal-details .real-name{
+border: 2px solid wheat;
+padding: 5px;
+}
+
+
+.stats-section{
+    height: 40%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 12px;
+    border: 2px solid purple
+}
+
+/*REVISAR ESTO*/
+.stat-row{
+    width: 100%;
+    
+border: 2px solid white;
+}
+
+.stat-label{
+    border: 2px solid palevioletred;
+}
+
+.stat-bar-bg{
+    border: 2px solid black;
+}
+
+
+.info-cards{
+    height: 40%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 12px;
+    text-align: center;
+    border: 2px solid greenyellow
+}
+    
 /*FOOTER*/
 
 footer{
