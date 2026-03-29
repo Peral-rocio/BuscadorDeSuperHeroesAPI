@@ -179,18 +179,15 @@ export function abrirModal(hero) {
                     <span>${stat.toUpperCase()}</span>
                     <span style="color: ${getStatColor(val)}; font-weight: bold;">${val}</span>
                   </div>
-                  <div class="stat-bar-bg">
-                    <div class="stat-bar-fill" style="width: ${val}%; background: ${getStatColor(val)};"></div>
-                  </div>
                 </div>
               `;
             }).join("")}
         </div>
 
         <div class="info-cards">
-          <div class="info-card"><h4>Género</h4><p>${hero.appearance?.gender || "-"}</p></div>
-          <div class="info-card"><h4>Raza</h4><p>${hero.appearance?.race || "-"}</p></div>
-          <div class="info-card"><h4>Alineación</h4>
+          <div class="info-card"><h4>Género/Gender:</h4><p>${hero.appearance?.gender || "-"}</p></div>
+          <div class="info-card"><h4>Raza/Race:</h4><p>${hero.appearance?.race || "-"}</p></div>
+          <div class="info-card"><h4>Alineación/Alignment:</h4>
             <p style="text-transform: capitalize; color: ${
               hero.biography?.alignment === "good" ? "var(--good-color)" :
               hero.biography?.alignment === "bad" ? "var(--bad-color)" : "var(--neutral-color)"
@@ -198,7 +195,7 @@ export function abrirModal(hero) {
           </div>
           <div class="info-card"><h4>Editorial</h4><p>${hero.biography?.publisher || "-"}</p></div>
           <div class="info-card" style="grid-column: 1 / -1;">
-            <h4>Lugar de Nacimiento</h4>
+            <h4>Lugar de Nacimiento/Birthplace:</h4>
             <p>${hero.biography?.placeOfBirth === "-" ? "Desconocido" : hero.biography?.placeOfBirth || "Desconocido"}</p>
           </div>
         </div>
