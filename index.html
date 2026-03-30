@@ -3,143 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../src/assets/imagenes/favicon.ico" type="image/x-icon">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="shortcut icon" href="../src/assets/imagenes/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/bienvenido.css">
     <title>Hero Finder</title>
 </head>
-<body class="modo-Claro">
-    <!-- COMIENZA AQUI EL HEADER -->
-    <header>
-        <div class="contenedor-header">
-        <img  id="imagen-logo" src="./src/assets/imagenes/logo.png" alt="Logo Hero-Finder">
-        <button id="btnCambiar-Tema">🌞</button>
-        </div>
-    </header>
-    <!--FINALIZA HEADER -->
-
-    <!--COMIENZA EL HERO -->
-    <div class="contenedor-hero">
-        <h1>
-            ⚡ ENCUENTRA TU PERSONAJE FAVORITO ⚡
-        </h1>
+<body>
+    <div class="contenedor">
+        <video class="video-batman" autoplay loop>
+             <source src="./src/assets/videos/batman-Bienvenida.mp4" type="video/mp4">
+             Tu navegador no soporta este video.
+         </video>
+         <a  href="./superHeroApp.html" class="bienvenido">
+            Bienvenido
+         </a>
     </div>
-    <!--FINALIZA EL HERO -->
-
-   <!--COMIENZA EL MAIN-->
-    <main>
-        <section class="section-contenedor">
-         <!-- INPUT QUE BUSCA  PERSONAJE POR NOMBRE--> 
-         <div class="contenedor-buscador">
-              <p id="titulo-pesonajes"> Encuentra a tu Personaje:</p>
-              <div class="input-buscador">
-                 <i class="bi bi-search"></i>
-                  <input id="buscardor" type="text" placeholder="Ingresa el nombre del Personaje">
-              </div>
-            <!-- FILTROS -->         
-            <!-- FILTRO DE GENERO -->
-              <div class="filtros">
-               <select id="genero-filtros">
-              <option value="all">Géneros</option>
-              <option value="male">Masculino</option>
-              <option value="female">Femenino</option>
-              <option value="-">Desconocido</option>
-            </select>
-         
-  
-            <!-- FILTRO DE ROL/STATUS/MORAL-->
-             <select id="alignment-Filtro">
-              <option value="all"> Personajes</option>
-              <option value="good">Heroes</option>
-              <option value="bad">Villanos</option>
-              <option value="neutral">Neutrales</option>
-              <option value="-">Desconocido</option>
-            </select>
-          
-          <!-- FILTRO DE ORDEN DE APARICION DE PERSONAJES -->
-            <select id="orden-filtros">
-              <option value="az"> A-Z</option>
-              <option value="za"> Z-A </option>
-            </select>
-        </div>
-        <div>
-            <button id="btn-buscar">Buscar</button>
-        </div> 
-          </section>
-          </div>
-        <!-- AQUI FINALIZA SECCION BUSCAR Y FILTROS-->
-
-        <!-- COMIENZA SECCION RESULTADO DE BUSQUEDA -->
-         <section class="contenedor-heroes">
-          <div class="loader">
-            <div class="spinner"></div>
-            <p class="cargandoheroes"> Cargando superheroes...</p>
-          </div>
-          <div class="heroes-grid" id="heroesGrid"></div>
-         </section>
-
-            <!--AQUI COMIENZA LA PAGINACION -->
-        <section class="pag-seccion">
-          <div class="pag-control" id="pagina-controles">
-            <button id="btn-primerapag" class="btn-pag" disabled>
-              <i class="bi bi-arrow-bar-left"></i>
-            </button>
-            <button id="btn-Ant" class="btn-pag" disabled >
-             <i class="bi bi-caret-left-fill"></i>
-            </button>
-            <span id="pagInfo" class="page-info">Página 1 de 1</span>
-            <button id="btn-sig" class="btn-pag" disabled>
-              <i class="bi bi-caret-right-fill"></i>
-            </button>
-            <button id="btn-finalpag" class="btn-pag" disabled>
-              <i class="bi bi-arrow-bar-right"></i>
-            </button>
-          </div>
-        </section>
-        </main>
-
-     <!-- AQUI COMIENZA EL MODAL-->
-    <section class="modal" id="heroModal">
-      <div class="modal-contenido glassmorphism">
-        <button class="btn-Cerrar" id="CerrarModalBtn">
-          <i class="bi bi-x"></i>
-        </button>
-        <div class="modal-body" id="modalBody">
-          Data modal inyectado aquí 
-        </div>
-      </div>
-    </section> 
-    <!-- TERMINA EL MODAL-->
-
-
-<!--AQUI COMIENZA EL FOOTER-->
-    <footer>
-       <div class="caja-footer">
-        <a class="icono-contacto" href="https://ar.linkedin.com/" aria-label="linkedin">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a class="icono-contacto" href="https://github.com/" aria-label="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a
-          class="icono-contacto"
-          href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&osid=1&passive=1209600&service=mail&ifkv=ARpgrqdjcIi_R3o4eQCOOFrDmizmTJAw5ONbecUsWw7gpbeHvI7JgQDLTZ-_WhGY_-piZrSUP7_uqg&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin" aria-label="Email"
-        >
-        <i class="bi bi-envelope"></i>
-        </a>
-        <a href="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json">
-        <i class="bi bi-info-square-fill"></i>
-        </a>
-      </div>
-    </footer>
-    <!--TERMINA FOOTER-->
-
-    <script  type="module" src="./src/Js/main.js"></script>
 </body>
 </html>

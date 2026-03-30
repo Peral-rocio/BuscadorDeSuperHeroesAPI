@@ -11,7 +11,8 @@
     --font-family: Comic Relief, system-ui;
     --color-secundario: rgb(223, 212, 56);
     --sombras: 0 4px 6px rgba(0, 0, 0, 0.87) ;
-    --color-botones: #1d6288;
+    --colorDetalles : #1d6288; 
+
 }
 
 /* CAMBIO DE TEMA CLARO/OSCURO*/
@@ -50,7 +51,7 @@ body.modo-Oscuro {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: var(--color-botones);
+    background-color: var(--colorDetalles);
     transition: 0.5s ease;
 }
 
@@ -146,7 +147,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 18px;
-    background-color:  #1d6288b0 ;
+    background-color: var(--colorDetalles) ;
     border-radius: 30px;
     box-shadow: var(--sombras);
     margin: 10px;
@@ -155,7 +156,7 @@ main{
 .bi-search{
     font-size: 38px;
     color: white;
-    -webkit-text-stroke: 1px #1d6288b0 ;
+    -webkit-text-stroke: 1px var(--colorDetalles) ;
 }
 
 #buscardor{
@@ -189,7 +190,7 @@ main{
     border-radius: 20px;
     font-family: var(--font-family);
     box-shadow: var(--sombras);
-    background-color: #1d6288;
+    background-color: var(--colorDetalles);
     color: white;
 }
 
@@ -257,12 +258,18 @@ main{
 
 /* LOADER  Y SPINNER*/
 .loader {
-  text-align: center;
-  padding: 50px 0;
+width: 95%;
+height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 50px 0;
 }
 
 .spinner {
-  width: 60px;
+ width: 60px;
   height: 60px;
   border: 4px solid #ccc;
   border-top-color: rgba(255, 0, 0, 0.877);
@@ -295,14 +302,15 @@ main{
 /* TARJETA DE HEROES */
 .card-heroes {
   width: 100%;
-  background: #1d6288;
-  border: 4px solid white;
+  background: var(--background-color);
+  border: 4px solid rgb(39, 100, 24);
   border-radius: 16px;
   font-family: var(--font-family);
   font-size: 18px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--sombras);
 }
 
 .card-heroes:hover {
@@ -376,7 +384,7 @@ main{
 }
 
 
-/* PAGINACION (Areglar lo faltante)*/
+/* PAGINACION*/
 
 .pag-seccion{
     width: auto;
@@ -406,7 +414,7 @@ main{
     font-size: 16px;
     padding: 5px;
     border-radius: 50%;
-    background-color: var(--color-botones);
+    background-color: var(--colorDetalles);
     color: black;
     -webkit-text-stroke: 2px black;
 
@@ -416,7 +424,7 @@ main{
 /*MODAL ESTILO*/
 
 .modal{
-   display: none ;
+   display: none;
    position: fixed;
    top: 0;
    left: 0;
@@ -429,32 +437,121 @@ main{
 }
 
 .modal-contenido{
-    width: 70%;
-    height: 300px;
-    background-color: var(--color-secundario);
+    width: 60vw;
+    height: 85vh;
+    background-color: rgba(0, 174, 255, 0.767);
     box-shadow: var(--sombras);
      border-radius: 30px;
-    position: relative;
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
      z-index: 1001;
      display: flex;
      justify-content: center;
      align-items: center;
      }
 
+.modal.active {
+   display: flex;
+}     
+
 .btn-Cerrar{
-    background-color: var(--background-color);
+    background-color: white;
     color: black;
     font-weight: 900px;
     font-size: 20px;
-    border-radius: 50%;
+    border-radius: 40%;
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 30px;
-    box-shadow: var(--sombras);
     cursor: pointer;
 }
 
+/*ESTILADO DEL MODAL DE JS */
 
+.modal-body{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.modal-grid{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: start;
+     align-items: center;
+     gap: 5px;
+}
+.modal-image{
+    width: 50%;
+    height: 100%;
+}
+
+.modal-image img{
+ width: 100%;
+ height: 100%;
+}
+
+.modal-details{
+    width: 50%;
+    height: 100%;
+    font-family: var(--font-family);
+    color: white;
+}
+
+.modal-details h2{
+    margin: 10px ;
+    padding-left: 30px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.modal-details .real-name{
+font-size: 18px ;
+padding: 5px;
+ color: white;
+}
+
+
+.stats-section{
+    height: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.stat-row{
+    width: 80%;
+}
+
+.stat-label{
+    background-color: rgba(179, 179, 179, 0.856);
+    padding: 1px;
+    font-size: 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   border-radius: 15px;
+}
+
+.info-cards{
+    height: 40%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 10px;
+}
+    
 /*FOOTER*/
 
 footer{
@@ -482,7 +579,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: white ;
     font-size: 40px;
     transition: 0.8s ease;
 }
@@ -616,9 +713,82 @@ footer{
     font-size: 30px;
 }
 
+/*MODAL RESPONSIVE*/
+
+.modal-contenido{
+    width: 90vw;
+    height: 70vh;
+    padding: 15px;
+     }
+
+.modal-details{
+    width: 50%;
+    height: 100%;
+    font-family: var(--font-family);
+    color: white;
 }
 
-/*DE TABLET A ESCRITORIO*/
+.modal-body{
+    padding: 0px;
+}
+
+.btn-Cerrar{
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal-details h2{
+    font-size: 18px;
+    margin: 5px;
+    padding: 0px;
+}
+
+.modal-details .real-name{
+font-size: 12px ;
+padding: 3px;
+ color: white;
+}
+
+.stats-section{
+    height: 40%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+}
+
+.stat-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-label{
+    width: 90%;
+    font-size: 10px;
+    padding: 2px;
+   gap: 5px;
+}
+
+.info-cards{
+    width: 100%;
+    height: 40%;
+    padding: 5px;
+    font-size: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+}
+
+/************************************DE TABLET A ESCRITORIO*/
 
 @media (min-width: 768px) and (max-width: 1023px) {
     #imagen-logo{
@@ -714,4 +884,82 @@ footer{
 .bi-info-square-fill {
     font-size: 40px;
 }
+
+/*MODAL*/
+
+
+.modal-contenido{
+    width: 70vw;
+    height: 85vh;
+    padding: 15px;
+     }
+
+.modal-details{
+    width: 50%;
+    height: 100%;
+    font-family: var(--font-family);
+    color: white;
+}
+
+.modal-body{
+    padding: 0px;
+}
+
+.btn-Cerrar{
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modal-details h2{
+    font-size: 30px;
+    margin: 0px;
+    margin-left: 10px;
+    padding: 0px;
+   
+}
+
+.modal-details .real-name{
+font-size: 20px ;
+padding: 3px;
+ color: white;
+}
+
+.stats-section{
+    height: 38%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-label{
+    width: 75%;
+    font-size: 12px;
+    padding: 2px;
+   gap: 15px;
+}
+
+.info-cards{
+    width: 100%;
+    height: 40%;
+   margin-top: 3px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+
 }

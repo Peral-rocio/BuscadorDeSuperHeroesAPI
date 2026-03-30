@@ -11,7 +11,7 @@ export function createAppState(initialItemsPerPage = 20) {
       order: "az", 
     },
   };
-
+  
   const applyFilters = () => {
     state.filteredHeroes = state.allHeroes.filter((hero) => {
       const searchLower = state.filters.search.toLowerCase();
